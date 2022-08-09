@@ -4,8 +4,10 @@ const Square = ({ value, onClick, isWinningCombo }) => {
   return (
     <button
       type="button"
-      className="square"
       onClick={onClick}
+      className={`square ${isWinningCombo ? 'wiining' : ''} ${
+        value === 'X' ? 'text-green' : 'text-orange'
+      }`}
       style={{ fontWeight: isWinningCombo ? 'bold' : 'normal' }}
     >
       {value}
